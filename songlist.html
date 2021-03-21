@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Song List</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<script language="javascript">
+		//reading in data from external json file
+		$.get( "https://sallvvy.github.io/hw9/songlist.json", function( data ) {
+			//part2: prints serialized data
+			str1 = JSON.stringify(data);
+			document.write(str1 +"<br/>");
+			
+			//part3: prints data in a table
+			s ="<table>";
+			s += display_th();
+			data.forEach(function(song) { 
+				s += songstr(song);
+			})
+			s += "</table></br>";
+			document.write(s);
+			
+			
+			//part4: shows songs based on input genre
+			str3 = "<form><select>";
+			str3 += "<option>Pop</option>" + "<option>Jazz</option>";
+			str3 += "<option>R&B</option>" + "<option>EDM</option>";
+			str3 += "<option>Soul</option>" + "<option>Salsa</option>";
+			str3 += "<option>Alternative</option>";
+			str3 += "</select> &nbsp;";
+			str3 += "<input type='button' id='btn' value='filter'>";
+			str3 += "</form></br>";
+			document.write(str3);
+			
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					genre = $("select").val();
+					s="<table>";
+					data.forEach(function(song) { 
+						s+=genre_match(song, genre);
+					});
+					s+="</table>";
+					//alert(s);
+					document.write(s);
+				})		
+			})
+			
+		})
+		
+		//returns a string of table head
+		function display_th(){
+			str= "<tr><th>Title</th>";
+			str+= "<th>Artist(s)</th>";
+			str+="<th>Genre(s)</th>";
+			str+="<th>Year</th></tr>";
+			return str;
+		}
+		
+		// returns a string of song attributes
+		function songstr(song){
+			str = "<tr><td>" + song["title"] + "</td>"
+						+ "<td>" + song["artist(s)"] + "</td>"
+						+ "<td>" + song["genre(s)"] + "</td>"
+						+ "<td>" + song["year"] + "</td></tr>";
+			return str;
+		}
+		
+		// returns the song title
+		function song_title(song){
+			str = "<li>" + song["title"] + "</li>";
+			return str;
+		}
+		
+		// returns the matched songs as a string
+		function genre_match(song, genre)
+		{
+				s="<ul>";
+				//alert("in check");
+				for (i=0; i<song["genre(s)"].length; i++){
+					if (song["genre(s)"][i]==genre){
+						//alert("the genre is: " + song["genre(s)"][i]);
+						s+=song_title(song);
+					}
+				}
+				s+="</ul>";
+				//alert(s);
+				return s;
+		}
+	</script>
+</body>
+</html>
