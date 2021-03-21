@@ -14,7 +14,7 @@
 	{
 		"title":"This Town",
 		"artist(s)": ["Kygo", "Sasha Sloan"], 
-		"music genre(s)":["Pop"],
+		"genre(s)":["Pop"],
 		"year":"2017"
 	},
 	{
@@ -32,7 +32,7 @@
 	{
 		"title":"What's Up",
 		"artist(s)": ["4 Non Blondes"], 
-		"music genre(s)":["Alternative"],
+		"genre(s)":["Alternative"],
 		"year":"1993"
 	},
 	{
