@@ -1,0 +1,63 @@
+[
+	{
+		"title":"respect",
+		"artist(s)": "Aretha Franklin", 
+		"music genre(s)":["Soul", "R&B"],
+		"year of release":"1967"
+	},
+	{
+		"title":"Les Feuilles Mortes",
+		"artist(s)": "Yves Montand", 
+		"music genre(s)":["Jazz", "Pop"],
+		"year of release":"1946"
+	},
+	{
+		"title":"This Town",
+		"artist(s)": ["Kygo", "Sasha Sloan"], 
+		"music genre(s)":["Pop"],
+		"year of release":"2017"
+	},
+	{
+		"title":"Sunrise",
+		"artist(s)": ["Kygo", "Jason Walker"], 
+		"music genre(s)":["EDM"],
+		"year of release":"2017"
+	},
+	{
+		"title":"Guantanamera",
+		"artist(s)": ["Celia Cruz"], 
+		"music genre(s)":["Salsa"],
+		"year of release":"1967" 
+	},
+	{
+		"title":"What's Up",
+		"artist(s)": ["4 Non Blondes"], 
+		"music genre(s)":["Alternative"],
+		"year of release":"1993"
+	},
+	{
+		"title":"Sunny",
+		"artist(s)": ["Bobby Hebb"], 
+		"music genre(s)":["R&B", "Soul"],
+		"year of release":"1966" 
+	},
+	{
+		"title":"That's Why You Go Away",
+		"artist(s)": ["Michael Learns To Rock"], 
+		"music genre(s)":["Pop"],
+		"year of release":"1995" 
+	},
+	{
+		"title":"Redbone",
+		"artist(s)": ["Childish Gambino"], 
+		"music genre(s)":["R&B"],
+		"year of release":"2016" 
+	},
+	{
+		"title":"Take Me Home, Country Roads",
+		"artist(s)": ["John Denver"], 
+		"music genre(s)":["Country"],
+		"year of release":"1971" 
+	},
+	
+]
